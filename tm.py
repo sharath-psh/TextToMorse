@@ -1,13 +1,22 @@
 import pyautogui
 import morse_talk as mtalk
 
+#word to convert
 txt = "code"
-
+#converts txt to morse code as binary string
 mcode = mtalk.encode(txt, encoding_type='binary')
 print(mcode)
 
-txt = list(txt)
-print(txt)
+#typecasts string to list
+mcode = list(mcode)
+print(mcode)
 
+mcode_lnth = len(mcode)
 
-# pyautogui.press('f1')
+for i in range(mcode_lnth):  # Use `xrange` for python 2.
+    if "1" in mcode[i]:
+        pyautogui.press('capslock')
+    elif "0" in mcode[i]:
+        pyautogui.press('capslock')
+
+print("loop done")
