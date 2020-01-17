@@ -2,7 +2,7 @@ import pyautogui
 import morse_talk as mtalk
 
 #word to convert
-txt = "B"
+txt = input("Enter your text:")
 #converts txt to morse code as binary string
 mcode = mtalk.encode(txt, encoding_type='binary')
 print(mcode)
