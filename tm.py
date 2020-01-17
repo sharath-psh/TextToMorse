@@ -18,10 +18,10 @@ for i in range(mcode_lnth):  # Use `xrange` for python 2.
         pyautogui.press('capslock')
         print("pressing 1")
     elif "0" in mcode[i]:
-        pyautogui.press('capslock')
+        pyautogui.press('numlock')
         print("pressing 0")
 
 pyautogui.press('capslock')
-
+pyautogui.press('numlock')
 
 print("loop done")
